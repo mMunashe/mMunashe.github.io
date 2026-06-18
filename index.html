@@ -305,6 +305,59 @@
       font-size: 1.1rem; color: var(--primary-light); flex-shrink: 0;
     }
 
+    /* ── experience ── */
+    #experience { padding: 0 0 120px; }
+    .exp-list { display: flex; flex-direction: column; gap: 16px; margin-top: 48px; }
+    .exp-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 32px 36px;
+      display: grid; grid-template-columns: auto 1fr; gap: 0 28px;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .exp-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; background: var(--gradient); opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .exp-card:hover { border-color: rgba(99,102,241,0.3); transform: translateY(-3px); background: var(--surface-hover); }
+    .exp-card:hover::before { opacity: 1; }
+    .exp-left { display: flex; flex-direction: column; align-items: center; padding-top: 4px; }
+    .exp-icon {
+      width: 48px; height: 48px; border-radius: 14px;
+      background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: var(--primary-light); flex-shrink: 0;
+    }
+    .exp-line {
+      width: 1px; flex: 1; min-height: 24px; margin-top: 12px;
+      background: linear-gradient(to bottom, var(--border), transparent);
+    }
+    .exp-right { display: flex; flex-direction: column; gap: 8px; }
+    .exp-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .exp-title {
+      font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem;
+      font-weight: 700; color: var(--text); letter-spacing: -0.02em; line-height: 1.2;
+    }
+    .exp-badge {
+      padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+      background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.25); color: var(--primary-light);
+    }
+    .exp-company {
+      font-size: 0.875rem; color: var(--secondary); font-weight: 500;
+    }
+    .exp-company span { color: var(--text-subtle); font-weight: 400; }
+    .exp-date { font-size: 0.78rem; color: var(--text-subtle); letter-spacing: 0.02em; }
+    .exp-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.75; margin-top: 4px; }
+    .exp-desc strong { color: var(--text); font-weight: 600; }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .exp-tag {
+      padding: 3px 10px; border-radius: 6px;
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      font-size: 0.7rem; color: var(--text-subtle); font-weight: 500; letter-spacing: 0.03em;
+    }
+
     /* ── skills ── */
     #skills { padding: 0 0 120px; }
     .skills-wrap { display: flex; flex-direction: column; gap: 30px; margin-top: 48px; }
@@ -500,6 +553,7 @@
     <a href="#" class="nav-logo" aria-label="Home">CMC</a>
     <ul class="nav-links" role="list">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -515,10 +569,11 @@
 
 <nav class="mob" id="mob" role="dialog" aria-modal="true" aria-label="Mobile menu">
   <button class="mob-x" id="mobx" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
-  <a href="#about"    class="ml">About</a>
-  <a href="#skills"   class="ml">Skills</a>
-  <a href="#projects" class="ml">Projects</a>
-  <a href="#contact"  class="ml">Contact</a>
+  <a href="#about"      class="ml">About</a>
+  <a href="#experience" class="ml">Experience</a>
+  <a href="#skills"     class="ml">Skills</a>
+  <a href="#projects"   class="ml">Projects</a>
+  <a href="#contact"    class="ml">Contact</a>
 </nav>
 
 <!-- HERO -->
@@ -622,6 +677,61 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-labelledby="exph">
+  <div class="container">
+    <div class="fu">
+      <div class="s-tag">Experience</div>
+      <h2 id="exph" class="s-title">Where I've worked.</h2>
+      <p class="s-sub">Real work, real systems, real impact.</p>
+    </div>
+    <div class="exp-list">
+
+      <!-- TMPCZ Internship -->
+      <div class="exp-card fu d1">
+        <div class="exp-left">
+          <div class="exp-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="exp-line"></div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-top">
+            <div class="exp-title">IT Intern</div>
+            <span class="exp-badge">Internship</span>
+          </div>
+          <div class="exp-company">
+            Traditional Medical Practitioners Council of Zimbabwe (TMPCZ)
+            <span>· Under the Ministry of Health and Child Care, Zimbabwe</span>
+          </div>
+          <div class="exp-date">October 2024 – August 2025 · Harare, Zimbabwe · On-site</div>
+          <p class="exp-desc">
+            Completed a 10-month IT internship at TMPCZ, a statutory body under Zimbabwe's
+            <strong>Ministry of Health and Child Care</strong>. Worked across both software
+            development and IT infrastructure.<br><br>
+            <strong>Software:</strong> Designed and built the full TMPCZ practitioner management
+            system — registration, licensing, EcoCash renewals, PDF certificate generation,
+            audit logs, and a public web portal. Deployed as both a web app and a desktop application
+            now live at tmpcz.org.zw.<br><br>
+            <strong>Infrastructure:</strong> Installed and configured Starlink connectivity,
+            set up LAN cabling and routers, managed datacenter cooling, and administered
+            Wi-Fi accounts for staff.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">Flask</span>
+            <span class="exp-tag">MySQL</span>
+            <span class="exp-tag">HTML/CSS/JS</span>
+            <span class="exp-tag">Networking</span>
+            <span class="exp-tag">Starlink</span>
+            <span class="exp-tag">LAN</span>
+            <span class="exp-tag">IT Infrastructure</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -796,7 +906,7 @@
         </a>
       </div>
       <div class="ct-soc">
-        <a href="https://github.com/mMunashe" target="_blank" rel="noopener" class="cs" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://mMunashe.github.io" target="_blank" rel="noopener" class="cs" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://www.linkedin.com/in/christian-chifuzhe-71b023302" target="_blank" rel="noopener" class="cs" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="mailto:cchifuzhe@gmail.com" class="cs" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
       </div>
