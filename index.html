@@ -1,193 +1,268 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Christian Munashe Chifuzhe, software engineer</title>
-  <meta name="description" content="Software engineer in Harare, Zimbabwe. I build software for Zimbabwean institutions and communities, in Flutter and Python.">
+  <title>Work | Reignfin Group</title>
+  <meta name="description" content="Live systems built and run by Reignfin Group, including Allipa, PrevailFleet, Global DNA, Insurance Systems and Reignfin Pensions.">
+  <link rel="icon" href="assets/logos/favicon-16x16.png" type="image/png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    /* A plain, single-column page: warm paper, near-black ink, one green for links. */
-    :root {
-      --paper: #fbfaf7;
-      --ink: #1a1a1a;
-      --muted: #5c5a55;
-      --rule: #e4e1da;
-      --link: #0b6e4f;
-      --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 17px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    a:hover { text-decoration-thickness: 2px; }
-    :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-
-    .page { max-width: 720px; margin: 0 auto; padding: 72px 24px 48px; }
-
-    h1, h2, h3 { margin: 0; line-height: 1.25; }
-    p { margin: 0 0 1em; }
-    p:last-child { margin-bottom: 0; }
-
-    /* Top */
-    h1 { font-size: 2.1rem; font-weight: 600; letter-spacing: -0.01em; }
-    .role { margin: 6px 0 24px; color: var(--muted); }
-    .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 24px 0 0; padding: 0; list-style: none; }
-    .status { margin-top: 20px; font-size: 15px; color: var(--muted); }
-
-    /* Sections */
-    section { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); }
-    h2 {
-      margin-bottom: 20px;
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-    }
-
-    /* Projects and experience share one layout: a heading line, a paragraph, then details in mono */
-    .entry + .entry { margin-top: 36px; }
-    .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; margin-bottom: 8px; }
-    h3 { font-size: 1.1rem; font-weight: 600; }
-    .entry-meta { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
-    .entry-sub { margin: -4px 0 10px; color: var(--muted); font-size: 15px; }
-    .tech { margin-top: 10px; font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
-    .entry ul { margin: 0 0 0 1.1em; padding: 0; }
-    .entry li + li { margin-top: 6px; }
-
-    /* Tools: label and list on one line */
-    .tools { margin: 0; }
-    .tools div { display: grid; grid-template-columns: 9rem 1fr; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--rule); }
-    .tools div:first-child { padding-top: 0; }
-    .tools dt { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); padding-top: 2px; }
-    .tools dd { margin: 0; }
-
-    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); }
-
-    @media (max-width: 560px) {
-      .page { padding-top: 48px; }
-      h1 { font-size: 1.75rem; }
-      .tools div { grid-template-columns: 1fr; gap: 2px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-      <h1>Christian Munashe Chifuzhe</h1>
-      <p class="role">Software engineer in Harare, Zimbabwe. I mostly work in Flutter and Python.</p>
-      <p>I build software for Zimbabwean institutions and communities: the registration system a statutory health council now runs on, an offline app that helps broiler farmers work out why their birds are sick, and a tool that checks public tenders. Most of it has to work on slow or patchy connections.</p>
-      <ul class="links">
-        <li><a href="https://github.com/mMunashe" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/christian-chifuzhe-71b023302" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="mailto:cchifuzhe@gmail.com">cchifuzhe@gmail.com</a></li>
-      </ul>
-      <p class="status">Open to full-time roles and freelance work, in Harare or remotely.</p>
-    </header>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Reignfin Group home">
+        <img src="assets/logos/logo-white.png" alt="Reignfin Group" width="1301" height="616">
+      </a>
 
-    <section aria-labelledby="about">
-      <h2 id="about">About</h2>
-      <p>I've been building software for over three years and have shipped four projects that people use. I work across the stack: Flutter on mobile, Python and Flask on the backend, plain HTML, CSS and JavaScript on the web, and language models where they actually help.</p>
-      <p>So far my work has been for government, agriculture and procurement, and all of it was designed around Zimbabwe's connectivity. That has meant offline-first apps, PDF certificates that replace paper forms, and a phone app that helps a farmer diagnose sick chickens.</p>
-    </section>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
 
-    <section aria-labelledby="projects">
-      <h2 id="projects">Projects</h2>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>TMPCZ practitioner system</h3>
-          <span class="entry-meta">Live · <a href="https://tmpcz.org.zw/" target="_blank" rel="noopener">tmpcz.org.zw</a></span>
-        </div>
-        <p class="entry-sub">Traditional Medical Practitioners Council of Zimbabwe</p>
-        <p>The system the council uses to register and license practitioners across the country. It handles registration, licence renewals paid with EcoCash, PDF certificates, an audit log and a public web portal. It runs both as a web application and as a packaged desktop app.</p>
-        <p class="tech">Python, Flask, MySQL, HTML/CSS/JS, ReportLab, PyWebView</p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Hukuimwe</h3>
-          <span class="entry-meta">Flutter app · <a href="https://github.com/mMunashe/Hukuimwe" target="_blank" rel="noopener">GitHub</a></span>
-        </div>
-        <p class="entry-sub">Broiler farm management for small-scale farmers</p>
-        <p>An offline-first mobile app for small-scale broiler farmers in rural Zimbabwe. Its health scanner covers ten diseases, using image analysis together with a symptom-based expert system. It also works out what a batch will need, tracks money in and out, and keeps vaccination schedules.</p>
-        <p class="tech">Flutter, Dart, SQLite</p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Tender evaluation platform</h3>
-          <span class="entry-meta">AI / NLP</span>
-        </div>
-        <p class="entry-sub">Built for Zimbabwe's public procurement process</p>
-        <p>Reads tender documents, checks each bidder for compliance, flags unusual prices with NLP, matches documents by meaning rather than keywords, and writes up the evaluation as a detailed PDF report.</p>
-        <p class="tech">Python, Streamlit, Hugging Face Transformers, ReportLab</p>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Farmers Hub</h3>
-          <span class="entry-meta">Website</span>
-        </div>
-        <p class="entry-sub">Agricultural supplies business with branches in Harare, Bindura and Bulawayo</p>
-        <p>A website for the business's agrochemicals, veterinary medicines, seeds and fertilisers, with a product catalogue, events, branch locations and WhatsApp ordering.</p>
-        <p class="tech">HTML, CSS, JavaScript</p>
-      </article>
-    </section>
-
-    <section aria-labelledby="experience">
-      <h2 id="experience">Experience</h2>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>IT Intern, TMPCZ</h3>
-          <span class="entry-meta">Oct 2024 – Aug 2025</span>
-        </div>
-        <p class="entry-sub">Traditional Medical Practitioners Council of Zimbabwe, under the Ministry of Health and Child Care. Harare, on site.</p>
-        <p>A ten-month internship covering both software and IT infrastructure.</p>
-        <ul>
-          <li><strong>Software:</strong> designed and built the council's practitioner management system, from registration and licensing to EcoCash renewals, PDF certificates, audit logs and the public portal. It is live at <a href="https://tmpcz.org.zw/" target="_blank" rel="noopener">tmpcz.org.zw</a> as a web app and a desktop app.</li>
-          <li><strong>Infrastructure:</strong> installed and configured Starlink, ran LAN cabling and set up routers, looked after cooling in the server room, and managed staff Wi-Fi accounts.</li>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="has-dropdown">
+            <a class="nav-trigger" href="services.html">Services<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown dropdown-wide">
+              <p class="dropdown-label">What we do</p>
+              <ul class="dropdown-list dropdown-grid">
+                <li><a href="services.html#strategy"><span class="dd-text"><strong>IT strategy and roadmaps</strong><span>A costed plan, in a sensible order.</span></span></a></li>
+                <li><a href="services.html#transformation"><span class="dd-text"><strong>Digital transformation</strong><span>Platforms your staff will actually use.</span></span></a></li>
+                <li><a href="services.html#ai"><span class="dd-text"><strong>AI and automation</strong><span>Only where the return can be measured.</span></span></a></li>
+                <li><a href="services.html#architecture"><span class="dd-text"><strong>Architecture and cloud</strong><span>Systems that stay reliable as they grow.</span></span></a></li>
+                <li><a href="services.html#payments"><span class="dd-text"><strong>Payments and fintech</strong><span>Card, mobile money and cross-border rails.</span></span></a></li>
+                <li><a href="services.html#security"><span class="dd-text"><strong>Security and risk review</strong><span>A prioritised list of what to fix first.</span></span></a></li>
+              </ul>
+              <a class="dropdown-foot" href="services.html#approach">How we work</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a class="nav-trigger" href="index.html#industries">Industries<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown dropdown-wide">
+              <p class="dropdown-label">Where we have delivered</p>
+              <ul class="dropdown-list dropdown-grid">
+                <li><a href="work.html#allipa"><span class="dd-text"><strong>Commerce and retail</strong><span>Shopping, airtime and bills in one chat.</span></span></a></li>
+                <li><a href="services.html#payments"><span class="dd-text"><strong>Payments</strong><span>Card, mobile money and cross-border rails.</span></span></a></li>
+                <li><a href="work.html#insurance"><span class="dd-text"><strong>Insurance</strong><span>Quotes, policies and licensing online.</span></span></a></li>
+                <li><a href="work.html#pensions"><span class="dd-text"><strong>Pensions</strong><span>Administration for funds and members.</span></span></a></li>
+                <li><a href="work.html#global-dna"><span class="dd-text"><strong>Healthcare</strong><span>Diagnostics ordered over WhatsApp.</span></span></a></li>
+                <li><a href="work.html#prevailfleet"><span class="dd-text"><strong>Fleet and logistics</strong><span>Vehicles, payments and insurance together.</span></span></a></li>
+              </ul>
+              <a class="dropdown-foot" href="index.html#industries">Results by industry</a>
+            </div>
+          </li>
+          <li class="has-dropdown">
+            <a class="nav-trigger" href="work.html" aria-current="page">Work<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <div class="dropdown">
+              <p class="dropdown-label">Live systems</p>
+              <ul class="dropdown-list">
+                <li><a href="work.html#allipa"><span class="dd-text"><strong>Allipa</strong><span>AI commerce agent on web and WhatsApp.</span></span></a></li>
+                <li><a href="work.html#prevailfleet"><span class="dd-text"><strong>PrevailFleet</strong><span>Fleet management for the Prevail Group.</span></span></a></li>
+                <li><a href="work.html#global-dna"><span class="dd-text"><strong>Global DNA</strong><span>DNA testing, ordered over WhatsApp.</span></span></a></li>
+                <li><a href="work.html#insurance"><span class="dd-text"><strong>Insurance Systems</strong><span>Motor insurance and licensing in a chat.</span></span></a></li>
+                <li><a href="work.html#pensions"><span class="dd-text"><strong>Reignfin Pensions</strong><span>Pension administration in one system.</span></span></a></li>
+              </ul>
+              <a class="dropdown-foot" href="work.html">See all our work</a>
+            </div>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-        <p class="tech">Python, Flask, MySQL, HTML/CSS/JS, networking, Starlink</p>
-      </article>
+        <div class="nav-actions">
+          <a class="portal-link" href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Client Portal</a>
+          <a class="btn" href="contact.html">Book a consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head" style="--page-photo: url('images/site/technician.jpg')">
+      <div class="wrap">
+        <h1 class="page-title reveal" data-scramble data-scramble-to="Over a million transactions and counting.">Work that is live and in daily use.</h1>
+        <p class="page-lede reveal">Most of what we advise on, we have built and run ourselves. Here are five of those systems.</p>
+      </div>
     </section>
 
-    <section aria-labelledby="tools">
-      <h2 id="tools">Tools</h2>
-      <dl class="tools">
-        <div><dt>Mobile</dt><dd>Flutter, Dart, SQLite</dd></div>
-        <div><dt>Backend and data</dt><dd>Python, Flask, Streamlit, MySQL, SQLite, ReportLab</dd></div>
-        <div><dt>Web</dt><dd>HTML, CSS, JavaScript, React</dd></div>
-        <div><dt>AI and ML</dt><dd>NLP, Hugging Face Transformers, semantic search, expert systems</dd></div>
-      </dl>
+    <section class="section">
+      <div class="wrap">
+        <article class="feature reveal" id="allipa">
+          <figure class="photo photo-portrait">
+            <img src="images/advisory-workshop.avif" alt="A team working through documents at a meeting table" width="980" height="629">
+          </figure>
+
+          <div class="feature-body">
+            <p class="meta">Commerce, Zimbabwe</p>
+            <h2 class="feature-title">Allipa</h2>
+            <p class="project-figure" data-count="1000000" data-compact data-suffix="+">1M+</p>
+            <p class="project-label">transactions processed</p>
+            <p>People wanted to buy electricity, airtime, data and everyday goods without installing another app.</p>
+            <p>Allipa is an AI agent that handles the whole sale in one chat, on the web or in WhatsApp, from choosing a product to paying for it. It has now processed more than a million transactions.</p>
+            <p class="feature-actions">
+              <a class="btn" href="https://myallipa.com" target="_blank" rel="noopener">Chat with Allipa</a>
+              <a class="text-link" href="https://wa.me/263786278009?text=Hi%20Allipa" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            </p>
+          </div>
+        </article>
+
+        <div class="capabilities reveal">
+          <div class="capabilities-intro">
+            <h3 class="h3">What you can ask Allipa to do</h3>
+            <p>Allipa now covers far more than airtime. It is also the front door to several of the systems below, so a customer can get an insurance quote, order a DNA test or ask about a pension in the same conversation.</p>
+          </div>
+          <ul class="capability-list">
+            <li>Airtime, data bundles and ZESA electricity</li>
+            <li>Shopping and browsing products</li>
+            <li>Orders, quotes and delivery</li>
+            <li>Events and RSVPs</li>
+            <li>Insurance quotes and applications</li>
+            <li>DNA tests</li>
+            <li>DStv renewals</li>
+            <li>Pensions</li>
+            <li>Money transfers abroad</li>
+            <li>Fuel requests for fleet cards</li>
+            <li>Agent wallet and commission</li>
+            <li>Support and account help</li>
+          </ul>
+        </div>
+
+        <!-- PLACEHOLDER: the figures on these four cards are dummy numbers. Change the visible number and data-count together. -->
+        <ul class="project-cards">
+          <li class="project reveal" id="prevailfleet">
+            <span class="tag">Fleet and logistics</span>
+            <p class="project-figure" data-count="300">300</p>
+            <p class="project-label">vehicles run from one platform</p>
+            <h2 class="h3">PrevailFleet</h2>
+            <p class="case-lede">Fleet management for the Prevail Group.</p>
+            <p>Vehicles, payments and insurance were handled in separate places. PrevailFleet brings all three into one operational platform.</p>
+          </li>
+          <li class="project reveal" id="global-dna">
+            <span class="tag">Healthcare</span>
+            <p class="project-figure" data-count="60" data-suffix="%">60%</p>
+            <p class="project-label">of test orders arrive without a phone call</p>
+            <h2 class="h3">Global DNA Management System</h2>
+            <p class="case-lede">DNA testing, ordered over WhatsApp.</p>
+            <p>Ordering a test used to involve forms, payments and consent in different steps. Customers now order, pay and give legally signed e-consent in one conversation.</p>
+          </li>
+          <li class="project reveal" id="insurance">
+            <span class="tag">Insurance</span>
+            <p class="project-figure" data-count="10" data-suffix=" min">10 min</p>
+            <p class="project-label">from quote to issued policy, down from three days</p>
+            <h2 class="h3">Insurance Systems</h2>
+            <p class="case-lede">Motor insurance and licensing in a chat.</p>
+            <p>Insuring and licensing a vehicle usually meant several offices and a lot of waiting. Vehicle insurance, ZINARA licensing and ZBC licences are now quoted, paid for and issued in a single chat, with the documents sent straight away.</p>
+          </li>
+          <li class="project reveal" id="pensions">
+            <span class="tag">Pensions</span>
+            <p class="project-figure" data-count="20000" data-suffix="+">20,000+</p>
+            <p class="project-label">members managing their pension online</p>
+            <h2 class="h3">Reignfin Pensions</h2>
+            <p class="case-lede">Pension administration for managers, employers and members.</p>
+            <p>Fund administration in one system, live in production across Zimbabwe.</p>
+            <p><a class="text-link" href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Member portal</a></p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section aria-labelledby="contact">
-      <h2 id="contact">Contact</h2>
-      <p>I'm open to full-time roles, freelance projects and collaborations, in Harare or remotely. Email is the quickest way to reach me: <a href="mailto:cchifuzhe@gmail.com">cchifuzhe@gmail.com</a>.</p>
+    <section class="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-text reveal">
+          <h2>Start with a conversation.</h2>
+          <p>Tell us what you are trying to decide, build or fix. We will come back with an honest view of the scope, timeline and cost.</p>
+          <p class="contact-free">The first consultation is free.</p>
+        </div>
+
+        <div class="contact-details reveal">
+          <div class="contact-item">
+            <p class="contact-label">Email</p>
+            <a class="contact-value" href="mailto:hello@reignfin.com?subject=Consultation%20request">hello@reignfin.com</a>
+          </div>
+          <div class="contact-item">
+            <p class="contact-label">WhatsApp</p>
+            <a class="contact-value" href="https://wa.me/447909818829" target="_blank" rel="noopener">+44 7909 818 829</a>
+          </div>
+          <div class="contact-item">
+            <p class="contact-label">Prefer a form?</p>
+            <p class="contact-plain"><a href="contact.html">Send us a message</a></p>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <footer>
-      <p>© 2026 Christian Munashe Chifuzhe, Harare</p>
-    </footer>
-
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logos/logo-white.png" alt="Reignfin Group" width="1301" height="616" loading="lazy">
+          <p>IT advisory and engineering for businesses in the United Kingdom and Zimbabwe.</p>
+          <!-- Instagram, Facebook and X are placeholders until the real profile links are ready -->
+          <ul class="social">
+            <li><a href="#" aria-label="Reignfin Group on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="#" aria-label="Reignfin Group on Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a></li>
+            <li><a href="#" aria-label="Reignfin Group on X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg></a></li>
+            <li><a href="https://wa.me/447909818829" target="_blank" rel="noopener" aria-label="Message Reignfin Group on WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.2 7.8c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.7l-.5.6c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.4.2.1.4.1.5 0l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.4.8-.6.4-1.3.6-2 .5-1.2-.2-2.6-1-3.8-2.2S8.9 10.9 8.7 9.7c-.1-.7.1-1.4.5-1.9z" fill="currentColor"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav class="footer-col" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="services.html#strategy">IT strategy and roadmaps</a></li>
+            <li><a href="services.html#transformation">Digital transformation</a></li>
+            <li><a href="services.html#ai">AI and automation</a></li>
+            <li><a href="services.html#architecture">Architecture and cloud</a></li>
+            <li><a href="services.html#payments">Payments and fintech</a></li>
+            <li><a href="services.html#security">Security and risk</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Work">
+          <h2>Work</h2>
+          <ul>
+            <li><a href="work.html#allipa">Allipa</a></li>
+            <li><a href="work.html#prevailfleet">PrevailFleet</a></li>
+            <li><a href="work.html#global-dna">Global DNA</a></li>
+            <li><a href="work.html#insurance">Insurance Systems</a></li>
+            <li><a href="work.html#pensions">Reignfin Pensions</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Company">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#industries">Industries</a></li>
+            <li><a href="services.html#approach">How we work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Client Portal</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="mailto:hello@reignfin.com">hello@reignfin.com</a></li>
+            <li><a href="https://wa.me/447909818829" target="_blank" rel="noopener">+44 7909 818 829</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; 2026 Reignfin Group Ltd. United Kingdom and Zimbabwe.</p>
+        <!-- PLACEHOLDER: dummy company number and registered office -->
+        <p>Registered in England and Wales, company number 13584726. Registered office: 2nd Floor, 27 Old Gloucester Street, London WC1N 3AX.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
