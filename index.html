@@ -1,268 +1,452 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work | Reignfin Group</title>
-  <meta name="description" content="Live systems built and run by Reignfin Group, including Allipa, PrevailFleet, Global DNA, Insurance Systems and Reignfin Pensions.">
-  <link rel="icon" href="assets/logos/favicon-16x16.png" type="image/png">
-
+  <title>Christian Munashe Chifuzhe, software engineer</title>
+  <meta name="description" content="Software engineer in Harare, Zimbabwe. I build software for Zimbabwean institutions and communities, in Flutter and Python.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.className = 'js';</script>
+  <style>
+    /* Warm paper and near-black ink, with four colours from home: green, amber, clay and indigo.
+       Each project and tool group takes one of them through --c (bars, dots) and --c-ink (text). */
+    :root {
+      --paper: #fbfaf7;
+      --ink: #1a1a1a;
+      --muted: #5c5a55;
+      --rule: #e4e1da;
+      --green: #0b6e4f;   --green-soft: #e2f0e9;
+      --amber: #e0a020;   --amber-soft: #fcefd2;  --amber-ink: #8a5a00;
+      --clay: #c2502b;    --clay-soft: #f8e3da;   --clay-ink: #9c3b1b;
+      --indigo: #3949ab;  --indigo-soft: #e6e8f6;
+      --serif: "Fraunces", Georgia, serif;
+      --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    }
+    .c-green  { --c: var(--green);  --soft: var(--green-soft);  --c-ink: var(--green); }
+    .c-amber  { --c: var(--amber);  --soft: var(--amber-soft);  --c-ink: var(--amber-ink); }
+    .c-clay   { --c: var(--clay);   --soft: var(--clay-soft);   --c-ink: var(--clay-ink); }
+    .c-indigo { --c: var(--indigo); --soft: var(--indigo-soft); --c-ink: var(--indigo); }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--green); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    :focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+    h1, h2, h3 { margin: 0; line-height: 1.2; }
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Highlighter on key phrases */
+    mark { background: linear-gradient(transparent 58%, var(--amber-soft) 58%); color: inherit; padding: 0 2px; }
+
+    /* Sticky top bar; the link for the section you are reading gets an amber underline */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 250, 247, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 760px; margin: 0 auto; padding: 12px 24px; }
+    .monogram { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+    .monogram span { color: var(--amber); }
+    .topnav { display: flex; gap: 18px; overflow-x: auto; font-size: 14px; }
+    .topnav a {
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .topnav a:hover { color: var(--ink); }
+    .topnav a[aria-current="true"] { color: var(--ink); border-bottom-color: var(--amber); }
+
+    .page { max-width: 760px; margin: 0 auto; padding: 64px 24px 48px; }
+
+    /* Header */
+    .hello { margin-bottom: 10px; font-family: var(--mono); font-size: 0.9rem; color: var(--green); }
+    h1 { font-family: var(--serif); font-size: clamp(2.4rem, 1.6rem + 3.5vw, 3.6rem); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; }
+    /* A hand-drawn amber squiggle under the surname that draws itself in */
+    .squiggle { position: relative; white-space: nowrap; }
+    .squiggle::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.14em;
+      height: 0.22em;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10' preserveAspectRatio='none'%3E%3Cpath d='M0 6 Q5 0 10 6 T20 6' fill='none' stroke='%23e0a020' stroke-width='2.5'/%3E%3C/svg%3E") 0 0 / 0.5em 100% repeat-x;
+      transform-origin: 0 50%;
+      animation: draw 0.9s 0.3s ease-out both;
+    }
+    @keyframes draw { from { transform: scaleX(0); } }
+
+    .role { margin: 18px 0 22px; font-size: 1.1rem; color: var(--muted); }
+    .role time { font-family: var(--mono); font-size: 0.95rem; color: var(--ink); }
+
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 28px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 18px;
+      background: var(--ink);
+      color: var(--paper);
+      border: 1.5px solid var(--ink);
+      border-radius: 6px;
+      font: 500 15px var(--sans);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    /* A solid offset shadow, like a sticker lifting off the page */
+    .btn:hover { text-decoration: none; transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--amber); }
+    .btn-outline { background: transparent; color: var(--ink); }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+
+    /* Sections */
+    section { margin-top: 88px; scroll-margin-top: 72px; }
+    h2 { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; font-family: var(--serif); font-size: 1.9rem; font-weight: 600; letter-spacing: -0.01em; }
+    h2 .num { font-family: var(--mono); font-size: 0.85rem; font-weight: 500; color: var(--amber-ink); }
+
+    /* Project filters */
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      padding: 5px 12px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      font: 500 13px var(--mono);
+      color: var(--muted);
+      cursor: pointer;
+      transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    }
+    .chip:hover { border-color: var(--ink); color: var(--ink); }
+    .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+    .filter-note { min-height: 1.6em; margin: 10px 0 14px; font-size: 14px; color: var(--muted); }
+
+    /* Project cards: a coloured bar on the left; hover tints the card in its colour */
+    .project {
+      padding: 22px 24px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--c);
+      border-radius: 6px;
+      transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.25s ease, box-shadow 0.2s ease;
+    }
+    .project + .project { margin-top: 16px; }
+    .project:hover { background: var(--soft); transform: translateX(4px); }
+    .project.is-dim { opacity: 0.3; }
+    .project.is-match { box-shadow: 0 0 0 2px var(--c); }
+
+    .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 16px; margin-bottom: 6px; }
+    h3 { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; }
+    .type { padding: 2px 10px; border-radius: 999px; background: var(--soft); color: var(--c-ink); font: 500 12px var(--mono); white-space: nowrap; }
+    .entry-sub { margin: 0 0 10px; color: var(--muted); font-size: 15px; }
+    .tech { margin-top: 12px; font-family: var(--mono); font-size: 0.82rem; color: var(--muted); }
+    .entry-link { margin-top: 12px; font-size: 15px; font-weight: 500; }
+
+    /* Experience as a timeline */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 10px; bottom: 6px; width: 2px; background: var(--rule); }
+    .timeline .entry { position: relative; }
+    .timeline .entry::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: var(--paper);
+      border: 3px solid var(--green);
+      border-radius: 50%;
+    }
+    .when { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+    .timeline ul { margin: 12px 0 0 1.1em; padding: 0; }
+    .timeline li + li { margin-top: 8px; }
+
+    /* Tools in coloured groups */
+    .tool-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; }
+    .tool-groups h3 { margin-bottom: 10px; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--c-ink); }
+    .tool-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .tool-list li { padding: 5px 12px; background: var(--soft); border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--c-ink); }
+
+    /* Contact: a green card */
+    .contact-card { padding: clamp(28px, 5vw, 44px); background: var(--green); color: #fff; border-radius: 10px; }
+    .contact-card h2 .num { color: var(--amber-soft); }
+    .contact-card p { color: rgba(255, 255, 255, 0.86); max-width: 34rem; }
+    .contact-card .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+    .contact-card .btn-outline { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.7); }
+    .contact-card .actions a:not(.btn) { color: #fff; }
+    .contact-card :focus-visible { outline-color: #fff; }
+
+    footer { margin-top: 56px; font-size: 14px; color: var(--muted); }
+
+    /* Sections fade up as they come into view (only with JS, and only if motion is welcome) */
+    .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 600px) {
+      .page { padding-top: 44px; }
+      .monogram { display: none; } /* frees enough room for all five section links */
+      .topnav { gap: 14px; }
+      .tool-groups { grid-template-columns: 1fr; }
+      .project { padding: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .squiggle::after { animation: none; }
+      .btn, .project { transition: none; }
+      .btn:hover, .project:hover { transform: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Reignfin Group home">
-        <img src="assets/logos/logo-white.png" alt="Reignfin Group" width="1301" height="616">
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li class="has-dropdown">
-            <a class="nav-trigger" href="services.html">Services<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <div class="dropdown dropdown-wide">
-              <p class="dropdown-label">What we do</p>
-              <ul class="dropdown-list dropdown-grid">
-                <li><a href="services.html#strategy"><span class="dd-text"><strong>IT strategy and roadmaps</strong><span>A costed plan, in a sensible order.</span></span></a></li>
-                <li><a href="services.html#transformation"><span class="dd-text"><strong>Digital transformation</strong><span>Platforms your staff will actually use.</span></span></a></li>
-                <li><a href="services.html#ai"><span class="dd-text"><strong>AI and automation</strong><span>Only where the return can be measured.</span></span></a></li>
-                <li><a href="services.html#architecture"><span class="dd-text"><strong>Architecture and cloud</strong><span>Systems that stay reliable as they grow.</span></span></a></li>
-                <li><a href="services.html#payments"><span class="dd-text"><strong>Payments and fintech</strong><span>Card, mobile money and cross-border rails.</span></span></a></li>
-                <li><a href="services.html#security"><span class="dd-text"><strong>Security and risk review</strong><span>A prioritised list of what to fix first.</span></span></a></li>
-              </ul>
-              <a class="dropdown-foot" href="services.html#approach">How we work</a>
-            </div>
-          </li>
-          <li class="has-dropdown">
-            <a class="nav-trigger" href="index.html#industries">Industries<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <div class="dropdown dropdown-wide">
-              <p class="dropdown-label">Where we have delivered</p>
-              <ul class="dropdown-list dropdown-grid">
-                <li><a href="work.html#allipa"><span class="dd-text"><strong>Commerce and retail</strong><span>Shopping, airtime and bills in one chat.</span></span></a></li>
-                <li><a href="services.html#payments"><span class="dd-text"><strong>Payments</strong><span>Card, mobile money and cross-border rails.</span></span></a></li>
-                <li><a href="work.html#insurance"><span class="dd-text"><strong>Insurance</strong><span>Quotes, policies and licensing online.</span></span></a></li>
-                <li><a href="work.html#pensions"><span class="dd-text"><strong>Pensions</strong><span>Administration for funds and members.</span></span></a></li>
-                <li><a href="work.html#global-dna"><span class="dd-text"><strong>Healthcare</strong><span>Diagnostics ordered over WhatsApp.</span></span></a></li>
-                <li><a href="work.html#prevailfleet"><span class="dd-text"><strong>Fleet and logistics</strong><span>Vehicles, payments and insurance together.</span></span></a></li>
-              </ul>
-              <a class="dropdown-foot" href="index.html#industries">Results by industry</a>
-            </div>
-          </li>
-          <li class="has-dropdown">
-            <a class="nav-trigger" href="work.html" aria-current="page">Work<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            <div class="dropdown">
-              <p class="dropdown-label">Live systems</p>
-              <ul class="dropdown-list">
-                <li><a href="work.html#allipa"><span class="dd-text"><strong>Allipa</strong><span>AI commerce agent on web and WhatsApp.</span></span></a></li>
-                <li><a href="work.html#prevailfleet"><span class="dd-text"><strong>PrevailFleet</strong><span>Fleet management for the Prevail Group.</span></span></a></li>
-                <li><a href="work.html#global-dna"><span class="dd-text"><strong>Global DNA</strong><span>DNA testing, ordered over WhatsApp.</span></span></a></li>
-                <li><a href="work.html#insurance"><span class="dd-text"><strong>Insurance Systems</strong><span>Motor insurance and licensing in a chat.</span></span></a></li>
-                <li><a href="work.html#pensions"><span class="dd-text"><strong>Reignfin Pensions</strong><span>Pension administration in one system.</span></span></a></li>
-              </ul>
-              <a class="dropdown-foot" href="work.html">See all our work</a>
-            </div>
-          </li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <a class="portal-link" href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Client Portal</a>
-          <a class="btn" href="contact.html">Book a consultation</a>
-        </div>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="monogram" href="#top">cmc<span>.</span></a>
+      <nav class="topnav" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
-  </header>
+  </div>
 
-  <main id="main">
+  <main class="page" id="top">
 
-    <section class="page-head" style="--page-photo: url('images/site/technician.jpg')">
-      <div class="wrap">
-        <h1 class="page-title reveal" data-scramble data-scramble-to="Over a million transactions and counting.">Work that is live and in daily use.</h1>
-        <p class="page-lede reveal">Most of what we advise on, we have built and run ourselves. Here are five of those systems.</p>
+    <header>
+      <p class="hello">Hi, I'm</p>
+      <h1>Christian Munashe <span class="squiggle">Chifuzhe</span></h1>
+      <p class="role">Software engineer in Harare, Zimbabwe, where it's <time data-harare-time>now</time>. I mostly work in Flutter and Python.</p>
+      <p>I build software for Zimbabwean institutions and communities: <mark>the registration system a statutory health council now runs on</mark>, <mark>an offline app that helps broiler farmers</mark> work out why their birds are sick, and a tool that checks public tenders. Most of it has to work on slow or patchy connections.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:cchifuzhe@gmail.com">Email me</a>
+        <button class="btn btn-outline" type="button" data-copy="cchifuzhe@gmail.com">Copy email</button>
+        <a href="https://github.com/mMunashe" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/christian-chifuzhe-71b023302" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+      <p class="status">Open to full-time roles and freelance work, in Harare or remotely</p>
+    </header>
+
+    <section id="about" class="reveal" aria-labelledby="about-title">
+      <h2 id="about-title"><span class="num">01</span>About</h2>
+      <p>I've been building software for over three years and have shipped four projects that people use. I work across the stack: Flutter on mobile, Python and Flask on the backend, plain HTML, CSS and JavaScript on the web, and language models where they actually help.</p>
+      <p>So far my work has been for government, agriculture and procurement, and all of it was designed around Zimbabwe's connectivity. That has meant offline-first apps, PDF certificates that replace paper forms, and a phone app that helps a farmer diagnose sick chickens.</p>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <article class="feature reveal" id="allipa">
-          <figure class="photo photo-portrait">
-            <img src="images/advisory-workshop.avif" alt="A team working through documents at a meeting table" width="980" height="629">
-          </figure>
+    <section id="projects" class="reveal" aria-labelledby="projects-title">
+      <h2 id="projects-title"><span class="num">02</span>Projects</h2>
 
-          <div class="feature-body">
-            <p class="meta">Commerce, Zimbabwe</p>
-            <h2 class="feature-title">Allipa</h2>
-            <p class="project-figure" data-count="1000000" data-compact data-suffix="+">1M+</p>
-            <p class="project-label">transactions processed</p>
-            <p>People wanted to buy electricity, airtime, data and everyday goods without installing another app.</p>
-            <p>Allipa is an AI agent that handles the whole sale in one chat, on the web or in WhatsApp, from choosing a product to paying for it. It has now processed more than a million transactions.</p>
-            <p class="feature-actions">
-              <a class="btn" href="https://myallipa.com" target="_blank" rel="noopener">Chat with Allipa</a>
-              <a class="text-link" href="https://wa.me/263786278009?text=Hi%20Allipa" target="_blank" rel="noopener">Chat on WhatsApp</a>
-            </p>
-          </div>
-        </article>
+      <!-- Clicking a tool highlights the projects that use it (script at the bottom) -->
+      <div class="filters" role="group" aria-label="Show projects that use">
+        <button class="chip" type="button" data-tool="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-tool="python" aria-pressed="false">Python</button>
+        <button class="chip" type="button" data-tool="flask" aria-pressed="false">Flask</button>
+        <button class="chip" type="button" data-tool="mysql" aria-pressed="false">MySQL</button>
+        <button class="chip" type="button" data-tool="flutter" aria-pressed="false">Flutter</button>
+        <button class="chip" type="button" data-tool="nlp" aria-pressed="false">NLP</button>
+        <button class="chip" type="button" data-tool="web" aria-pressed="false">HTML/CSS/JS</button>
+      </div>
+      <p class="filter-note" aria-live="polite"></p>
 
-        <div class="capabilities reveal">
-          <div class="capabilities-intro">
-            <h3 class="h3">What you can ask Allipa to do</h3>
-            <p>Allipa now covers far more than airtime. It is also the front door to several of the systems below, so a customer can get an insurance quote, order a DNA test or ask about a pension in the same conversation.</p>
+      <article class="project c-green" data-tools="python flask mysql web">
+        <div class="entry-head">
+          <h3>TMPCZ practitioner system</h3>
+          <span class="type">Live</span>
+        </div>
+        <p class="entry-sub">Traditional Medical Practitioners Council of Zimbabwe</p>
+        <p>The system the council uses to register and license practitioners across the country. It handles registration, licence renewals paid with EcoCash, PDF certificates, an audit log and a public web portal. It runs both as a web application and as a packaged desktop app.</p>
+        <p class="tech">Python, Flask, MySQL, HTML/CSS/JS, ReportLab, PyWebView</p>
+        <p class="entry-link"><a href="https://tmpcz.org.zw/" target="_blank" rel="noopener">tmpcz.org.zw</a></p>
+      </article>
+
+      <article class="project c-amber" data-tools="flutter">
+        <div class="entry-head">
+          <h3>Hukuimwe</h3>
+          <span class="type">Flutter app</span>
+        </div>
+        <p class="entry-sub">Broiler farm management for small-scale farmers</p>
+        <p>An offline-first mobile app for small-scale broiler farmers in rural Zimbabwe. Its health scanner covers ten diseases, using image analysis together with a symptom-based expert system. It also works out what a batch will need, tracks money in and out, and keeps vaccination schedules.</p>
+        <p class="tech">Flutter, Dart, SQLite</p>
+        <p class="entry-link"><a href="https://github.com/mMunashe/Hukuimwe" target="_blank" rel="noopener">Code on GitHub</a></p>
+      </article>
+
+      <article class="project c-indigo" data-tools="python nlp">
+        <div class="entry-head">
+          <h3>Tender evaluation platform</h3>
+          <span class="type">AI / NLP</span>
+        </div>
+        <p class="entry-sub">Built for Zimbabwe's public procurement process</p>
+        <p>Reads tender documents, checks each bidder for compliance, flags unusual prices with NLP, matches documents by meaning rather than keywords, and writes up the evaluation as a detailed PDF report.</p>
+        <p class="tech">Python, Streamlit, Hugging Face Transformers, ReportLab</p>
+      </article>
+
+      <article class="project c-clay" data-tools="web">
+        <div class="entry-head">
+          <h3>Farmers Hub</h3>
+          <span class="type">Website</span>
+        </div>
+        <p class="entry-sub">Agricultural supplies business with branches in Harare, Bindura and Bulawayo</p>
+        <p>A website for the business's agrochemicals, veterinary medicines, seeds and fertilisers, with a product catalogue, events, branch locations and WhatsApp ordering.</p>
+        <p class="tech">HTML, CSS, JavaScript</p>
+      </article>
+    </section>
+
+    <section id="experience" class="reveal" aria-labelledby="experience-title">
+      <h2 id="experience-title"><span class="num">03</span>Experience</h2>
+      <div class="timeline">
+        <article class="entry">
+          <div class="entry-head">
+            <h3>IT Intern, TMPCZ</h3>
+            <span class="when">Oct 2024 – Aug 2025</span>
           </div>
-          <ul class="capability-list">
-            <li>Airtime, data bundles and ZESA electricity</li>
-            <li>Shopping and browsing products</li>
-            <li>Orders, quotes and delivery</li>
-            <li>Events and RSVPs</li>
-            <li>Insurance quotes and applications</li>
-            <li>DNA tests</li>
-            <li>DStv renewals</li>
-            <li>Pensions</li>
-            <li>Money transfers abroad</li>
-            <li>Fuel requests for fleet cards</li>
-            <li>Agent wallet and commission</li>
-            <li>Support and account help</li>
+          <p class="entry-sub">Traditional Medical Practitioners Council of Zimbabwe, under the Ministry of Health and Child Care. Harare, on site.</p>
+          <p>A ten-month internship covering both software and IT infrastructure.</p>
+          <ul>
+            <li><strong>Software:</strong> designed and built the council's practitioner management system, from registration and licensing to EcoCash renewals, PDF certificates, audit logs and the public portal. It is live at <a href="https://tmpcz.org.zw/" target="_blank" rel="noopener">tmpcz.org.zw</a> as a web app and a desktop app.</li>
+            <li><strong>Infrastructure:</strong> installed and configured Starlink, ran LAN cabling and set up routers, looked after cooling in the server room, and managed staff Wi-Fi accounts.</li>
           </ul>
-        </div>
-
-        <!-- PLACEHOLDER: the figures on these four cards are dummy numbers. Change the visible number and data-count together. -->
-        <ul class="project-cards">
-          <li class="project reveal" id="prevailfleet">
-            <span class="tag">Fleet and logistics</span>
-            <p class="project-figure" data-count="300">300</p>
-            <p class="project-label">vehicles run from one platform</p>
-            <h2 class="h3">PrevailFleet</h2>
-            <p class="case-lede">Fleet management for the Prevail Group.</p>
-            <p>Vehicles, payments and insurance were handled in separate places. PrevailFleet brings all three into one operational platform.</p>
-          </li>
-          <li class="project reveal" id="global-dna">
-            <span class="tag">Healthcare</span>
-            <p class="project-figure" data-count="60" data-suffix="%">60%</p>
-            <p class="project-label">of test orders arrive without a phone call</p>
-            <h2 class="h3">Global DNA Management System</h2>
-            <p class="case-lede">DNA testing, ordered over WhatsApp.</p>
-            <p>Ordering a test used to involve forms, payments and consent in different steps. Customers now order, pay and give legally signed e-consent in one conversation.</p>
-          </li>
-          <li class="project reveal" id="insurance">
-            <span class="tag">Insurance</span>
-            <p class="project-figure" data-count="10" data-suffix=" min">10 min</p>
-            <p class="project-label">from quote to issued policy, down from three days</p>
-            <h2 class="h3">Insurance Systems</h2>
-            <p class="case-lede">Motor insurance and licensing in a chat.</p>
-            <p>Insuring and licensing a vehicle usually meant several offices and a lot of waiting. Vehicle insurance, ZINARA licensing and ZBC licences are now quoted, paid for and issued in a single chat, with the documents sent straight away.</p>
-          </li>
-          <li class="project reveal" id="pensions">
-            <span class="tag">Pensions</span>
-            <p class="project-figure" data-count="20000" data-suffix="+">20,000+</p>
-            <p class="project-label">members managing their pension online</p>
-            <h2 class="h3">Reignfin Pensions</h2>
-            <p class="case-lede">Pension administration for managers, employers and members.</p>
-            <p>Fund administration in one system, live in production across Zimbabwe.</p>
-            <p><a class="text-link" href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Member portal</a></p>
-          </li>
-        </ul>
+          <p class="tech">Python, Flask, MySQL, HTML/CSS/JS, networking, Starlink</p>
+        </article>
       </div>
     </section>
 
-    <section class="contact">
-      <div class="wrap contact-grid">
-        <div class="contact-text reveal">
-          <h2>Start with a conversation.</h2>
-          <p>Tell us what you are trying to decide, build or fix. We will come back with an honest view of the scope, timeline and cost.</p>
-          <p class="contact-free">The first consultation is free.</p>
+    <section id="tools" class="reveal" aria-labelledby="tools-title">
+      <h2 id="tools-title"><span class="num">04</span>Tools</h2>
+      <div class="tool-groups">
+        <div class="c-amber">
+          <h3>Mobile</h3>
+          <ul class="tool-list"><li>Flutter</li><li>Dart</li><li>SQLite</li></ul>
         </div>
-
-        <div class="contact-details reveal">
-          <div class="contact-item">
-            <p class="contact-label">Email</p>
-            <a class="contact-value" href="mailto:hello@reignfin.com?subject=Consultation%20request">hello@reignfin.com</a>
-          </div>
-          <div class="contact-item">
-            <p class="contact-label">WhatsApp</p>
-            <a class="contact-value" href="https://wa.me/447909818829" target="_blank" rel="noopener">+44 7909 818 829</a>
-          </div>
-          <div class="contact-item">
-            <p class="contact-label">Prefer a form?</p>
-            <p class="contact-plain"><a href="contact.html">Send us a message</a></p>
-          </div>
+        <div class="c-green">
+          <h3>Backend and data</h3>
+          <ul class="tool-list"><li>Python</li><li>Flask</li><li>Streamlit</li><li>MySQL</li><li>SQLite</li><li>ReportLab</li></ul>
+        </div>
+        <div class="c-clay">
+          <h3>Web</h3>
+          <ul class="tool-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
+        </div>
+        <div class="c-indigo">
+          <h3>AI and ML</h3>
+          <ul class="tool-list"><li>NLP</li><li>Hugging Face Transformers</li><li>Semantic search</li><li>Expert systems</li></ul>
         </div>
       </div>
     </section>
+
+    <section id="contact" class="contact-card reveal" aria-labelledby="contact-title">
+      <h2 id="contact-title"><span class="num">05</span>Contact</h2>
+      <p>I'm open to full-time roles, freelance projects and collaborations, in Harare or remotely. Email is the quickest way to reach me: <strong>cchifuzhe@gmail.com</strong>.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:cchifuzhe@gmail.com">Email me</a>
+        <button class="btn btn-outline" type="button" data-copy="cchifuzhe@gmail.com">Copy email</button>
+        <a href="https://github.com/mMunashe" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/christian-chifuzhe-71b023302" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Christian Munashe Chifuzhe, Harare</p>
+    </footer>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="assets/logos/logo-white.png" alt="Reignfin Group" width="1301" height="616" loading="lazy">
-          <p>IT advisory and engineering for businesses in the United Kingdom and Zimbabwe.</p>
-          <!-- Instagram, Facebook and X are placeholders until the real profile links are ready -->
-          <ul class="social">
-            <li><a href="#" aria-label="Reignfin Group on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a></li>
-            <li><a href="#" aria-label="Reignfin Group on Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg></a></li>
-            <li><a href="#" aria-label="Reignfin Group on X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zM17.61 20.64h2.04L6.49 3.24H4.3z"/></svg></a></li>
-            <li><a href="https://wa.me/447909818829" target="_blank" rel="noopener" aria-label="Message Reignfin Group on WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9.2 7.8c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.7l-.5.6c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.4.2.1.4.1.5 0l.6-.6c.2-.2.4-.2.7-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.4.8-.6.4-1.3.6-2 .5-1.2-.2-2.6-1-3.8-2.2S8.9 10.9 8.7 9.7c-.1-.7.1-1.4.5-1.9z" fill="currentColor"/></svg></a></li>
-          </ul>
-        </div>
+  <script>
+    // Live time in Harare, next to "Software engineer in Harare"
+    const clock = document.querySelector('[data-harare-time]');
+    const showTime = () => {
+      clock.textContent = new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Harare' });
+    };
+    showTime();
+    setInterval(showTime, 30000);
 
-        <nav class="footer-col" aria-label="Services">
-          <h2>Services</h2>
-          <ul>
-            <li><a href="services.html#strategy">IT strategy and roadmaps</a></li>
-            <li><a href="services.html#transformation">Digital transformation</a></li>
-            <li><a href="services.html#ai">AI and automation</a></li>
-            <li><a href="services.html#architecture">Architecture and cloud</a></li>
-            <li><a href="services.html#payments">Payments and fintech</a></li>
-            <li><a href="services.html#security">Security and risk</a></li>
-          </ul>
-        </nav>
+    // Copy email; if the browser will not allow it (e.g. opened as a file), fall back to the mail app
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(button.dataset.copy);
+        } catch {
+          window.location.href = `mailto:${button.dataset.copy}`;
+          return;
+        }
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = 'Copy email'; }, 2000);
+      });
+    });
 
-        <nav class="footer-col" aria-label="Work">
-          <h2>Work</h2>
-          <ul>
-            <li><a href="work.html#allipa">Allipa</a></li>
-            <li><a href="work.html#prevailfleet">PrevailFleet</a></li>
-            <li><a href="work.html#global-dna">Global DNA</a></li>
-            <li><a href="work.html#insurance">Insurance Systems</a></li>
-            <li><a href="work.html#pensions">Reignfin Pensions</a></li>
-          </ul>
-        </nav>
+    // Tool filter: highlight the projects that use the chosen tool and say which ones
+    const chips = document.querySelectorAll('.chip');
+    const projects = document.querySelectorAll('.project');
+    const note = document.querySelector('.filter-note');
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const tool = chip.dataset.tool;
+        const names = [];
+        chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+        projects.forEach((project) => {
+          const uses = tool === 'all' || project.dataset.tools.split(' ').includes(tool);
+          project.classList.toggle('is-dim', !uses);
+          project.classList.toggle('is-match', uses && tool !== 'all');
+          if (uses) names.push(project.querySelector('h3').textContent);
+        });
+        note.textContent = tool === 'all'
+          ? ''
+          : `${chip.textContent} is used in ${names.length} ${names.length === 1 ? 'project' : 'projects'}: ${names.join(', ')}.`;
+      });
+    });
 
-        <nav class="footer-col" aria-label="Company">
-          <h2>Company</h2>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#industries">Industries</a></li>
-            <li><a href="services.html#approach">How we work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://pensions-member.reignfin.com" target="_blank" rel="noopener">Client Portal</a></li>
-          </ul>
-        </nav>
+    if ('IntersectionObserver' in window) {
+      // Underline the section you are reading in the top bar
+      const navLinks = document.querySelectorAll('.topnav a');
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((a) => a.setAttribute('aria-current', String(a.getAttribute('href') === `#${entry.target.id}`)));
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      document.querySelectorAll('section[id]').forEach((section) => spy.observe(section));
 
-        <div class="footer-col">
-          <h2>Get in touch</h2>
-          <ul>
-            <li><a href="mailto:hello@reignfin.com">hello@reignfin.com</a></li>
-            <li><a href="https://wa.me/447909818829" target="_blank" rel="noopener">+44 7909 818 829</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-legal">
-        <p>&copy; 2026 Reignfin Group Ltd. United Kingdom and Zimbabwe.</p>
-        <!-- PLACEHOLDER: dummy company number and registered office -->
-        <p>Registered in England and Wales, company number 13584726. Registered office: 2nd Floor, 27 Old Gloucester Street, London WC1N 3AX.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
+      // Fade sections in as they arrive
+      const reveal = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            reveal.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.reveal').forEach((el) => reveal.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+    }
+  </script>
 </body>
 </html>
